@@ -1,0 +1,201 @@
+  :root{
+    --bg:#F4F1EC;
+    --ink:#1d1d1d;
+    --link:#324A3D;
+  }
+
+  /* Global */
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Figtree', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+
+  #wrapper { width: 800px; max-width: 98%; margin: auto; }
+
+  /* Title uses Source Serif 4 */
+  .page-title {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 700;
+    font-size: clamp(22px, 2.5vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px 0;
+    text-align: left; /* change to center if you want */
+  }
+
+  h1, h2, h3, h4 { font-weight: 400; font-size: clamp(18px, 2.5vw, 24px); } /* headings still inherit Figtree unless you add .page-title */
+
+  .text-h1 { font-size: 32px; line-height: 36px; font-weight: 600; }
+  .text-h2 { font-size: 24px; line-height: 36px; font-weight: 600; }
+  .text-body-1 { font-size: 20px; line-height: 32px; }
+  .text-body-2 { font-size: 16px; line-height: 28px; }
+  .blockquote { font-size: 32px; font-weight: 700; line-height: 36px; text-transform: uppercase; text-align: center; }
+  .text-caption { font-size: 14px; line-height: 22px; }
+  a { color: var(--link) !important; border-bottom: 2px solid var(--link); text-decoration: none; word-break: break-word; }
+
+/* Accordion (clean + accessible colors) */
+.accordion-container {
+  border: 1px solid #f6f5ef;
+  background: #6D6659;          /* warm brown-gray base */
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow: hidden;             /* tidy edges when animating */
+}
+
+.accordion-header {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;                  /* default text color */
+  background: #6D6659;          /* match container */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f0efeb;    /* light hover background */
+  color: #6D6659;               /* readable warm text */
+}
+
+.accordion-arrow {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #fff;
+}
+
+.accordion-header:hover .accordion-arrow {
+  color: #6D6659;               /* match text color on hover */
+}
+
+.accordion-arrow.open {
+  transform: rotate(180deg);
+}
+
+.panel {
+  padding: 15px 20px;
+  background: #fff;
+  display: none;
+  border-top: 1px solid #f6f5ef;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.panel p,
+.panel ul {
+  font-size: 0.8em;
+  color: #333;
+}
+
+  /* Basic scrolly layout (for step/story block below) */
+  #scrolly { display: grid; grid-template-columns: min(40ch, 45%) 1fr; gap: 24px; align-items: start; }
+  #scrolly .steps .step { margin: 0 0 24px 0; padding: 12px 16px; border: 2px solid var(--link); background: #fff; }
+  #scrolly .story { position: sticky; top: 12vh; height: 76vh; display: grid; }
+  #scrolly .story .flourish-embed { width: 100%; height: 100%; }
+
+  /* keep embeds’ credit hidden if desired */
+  .flourish-credit { display: none !important; }
+
+		
+/* ================================
+   Scrollytelling layout (Flourish)
+   Tweak the values in :root as needed
+   ================================ */
+:root{
+  /* spacing controls */
+  --step-gap-desktop: 85vh;  /* distance between cards */
+  --step-gap-mobile: 52vh;
+  --first-runway: 100vh;     /* space before the first card */
+  --last-runway-desktop: 120vh;
+  --last-runway-mobile: 90vh;
+
+  /* sticky offset for the chart/story */
+  --sticky-top-desktop: 14vh; /* try 14–16vh */
+  --sticky-top-mobile: 8vh;
+}
+
+/* Sticky Flourish story container */
+.fl-scrolly-sticky{
+  position: sticky;          /* script also sets this */
+  top: var(--sticky-top-desktop);
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Scroll steps (cards) — visual style only */
+.fl-scrolly-section .fl-scrolly-step{
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #000;          /* thin dark border */
+  box-shadow: 0 5px 15px rgba(0,0,0,.35);
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: left;
+  line-height: 1.2;
+  width: 50%;                      /* centered half-width */
+  max-width: 640px;
+  margin: 0 auto;                  /* no vertical margin; spacing handled below */
+  font-size: 16px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* Spacing logic (no margin-collapsing) */
+.fl-scrolly-section .fl-scrolly-step:first-of-type{ margin-top: var(--first-runway); }
+.fl-scrolly-section .fl-scrolly-step + .fl-scrolly-step{ margin-top: var(--step-gap-desktop); }
+.fl-scrolly-section .fl-scrolly-step:last-of-type{ margin-bottom: var(--last-runway-desktop); }
+
+/* Active step emphasis (JS toggles .is-active) */
+.fl-scrolly-section .fl-scrolly-step.is-active{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(11,108,255,.18);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+/* Paragraphs inside steps */
+.fl-scrolly-section .fl-scrolly-step p{
+  margin: 0;
+  letter-spacing: 0.005em;
+}
+
+/* Step links (Flourish slide triggers) */
+.fl-scrolly-section .fl-scrolly-step a.fl-scrolly-link{
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Accessible keyboard focus */
+.fl-scrolly-section .fl-scrolly-step a.fl-scrolly-link:focus-visible{
+  outline: 2px solid #0b6cff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px){
+  .fl-scrolly-sticky{ top: var(--sticky-top-mobile); }
+
+  .fl-scrolly-section .fl-scrolly-step{
+    width: 90vw;
+    max-width: 36rem;
+    padding: 14px 16px;
+    line-height: 1.3;              /* readability on small screens */
+  }
+
+  .fl-scrolly-section .fl-scrolly-step + .fl-scrolly-step{ margin-top: var(--step-gap-mobile); }
+  .fl-scrolly-section .fl-scrolly-step:last-of-type{ margin-bottom: var(--last-runway-mobile); }
+}
+
+.fl-scrolly-section .fl-scrolly-step { font-family: inherit !important; }
+
