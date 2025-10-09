@@ -199,3 +199,6 @@
 
 .fl-scrolly-section .fl-scrolly-step { font-family: inherit !important; }
 
+#wrapper {
+  padding-top: clamp(24px, 6vh, 96px);
+}
