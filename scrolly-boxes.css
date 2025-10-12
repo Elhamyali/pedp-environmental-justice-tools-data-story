@@ -51,7 +51,7 @@
 
   h1, h2, h3, h4 { font-weight: 400; font-size: clamp(18px, 2.5vw, 24px); } /* headings still inherit Figtree unless you add .page-title */
 
-  .text-h1 { font-size: 32px; line-height: 36px; font-weight: 600; }
+  .text-h1 { font-size: 34px; line-height: 36px; font-weight: 600; }
   .text-h2 { font-size: 24px; line-height: 36px; font-weight: 600; }
   .text-body-1 { font-size: 20px; line-height: 32px; }
   .text-body-2 { font-size: 16px; line-height: 28px; }
