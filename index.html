@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
-  <title>PEDP Data Story</title>
+  <title>PEDP Environmental Justice Tools Story</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="how-to-make-a-story">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,29 +15,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..900;1,8..60,400..900&display=swap" rel="stylesheet">
 
-  <!-- Scrollytelling card styles (separate file) -->
-  <link rel="stylesheet" href="scrolly-boxes.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div id="wrapper">
-    <!-- ---------- Title (keep) ---------- -->
-    <h1 class="page-title">2,212 studies used disappearing federal climate justice tools. We analyzed them all.</h1>
-    <p>Here’s what the data reveals about how they’re used and why researchers rely on them.</p>
-    <hr>
+  <!-- Skip link -->
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
 
-  <!-- ---------- GIF section ---------- -->
-  <figure class="media">
-    <img
-      src="images/poster.gif"
-      alt="Animated preview related to the climate justice tools story"
-      loading="lazy"
-      decoding="async"
-    >
-    <!-- Optional caption
-    <figcaption>Animated teaser for the story.</figcaption>
-    -->
-  </figure>
+  <!-- Brand bar -->
+  <header class="brandbar" role="banner"
+          aria-label="Public Environmental Data Project presents this data story">
+    <div class="brandbar-inner">
+      <a class="brandbar-link"
+         href="https://screening-tools.com/"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Visit the Public Environmental Data Project (opens in a new tab)">
+        <img src="images/pedp_logo.webp"
+             alt="Public Environmental Data Project logo"
+             width="160" height="40" decoding="async" />
+      </a>
+      <span class="brandbar-text">presents…</span>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main id="main" tabindex="-1">
+    <div id="wrapper">
+      <!-- Page hero -->
+      <header class="page-hero">
+        <h1 class="page-title">2,212 studies used disappearing federal climate justice tools. We analyzed them all.</h1>
+        <p class="page-dek">Here’s what the data reveals about how they’re used and why researchers rely on them.</p>
+      </header>
+      <hr />
+
+    <!-- Hero media -->
+    <figure class="hero-media" aria-describedby="media-caption-1">
+      <img
+        src="images/poster.gif"
+        alt="Animated collage of papers and headlines related to environmental justice research."
+        width="1200" height="675"
+        loading="lazy" decoding="async" />
+      <figcaption id="media-caption-1" class="text-caption">
+        Illustration by Elham Ali
+      </figcaption>
+    </figure>
 
     <p><em>This story is part of <strong><a href="https://screening-tools.com/" target="_blank" rel="noopener noreferrer">Made Possible</a></strong>, a PEDP series about the people whose research, teaching, and advocacy depend on federal environmental justice tools to serve their communities.</em></p>
 
@@ -150,6 +172,26 @@
     </div>
   </div>
 
+  <!-- ====== Acknowledgments ====== -->
+  <section id="acknowledgments">
+    <h4>Acknowledgments</h4>
+    <p>We’re grateful to partners and reviewers who informed this work.</p>
+  </section>
+  
+  <!-- ====== Credits ====== -->
+  <section id="credits">
+    <h3>Credits</h3>
+  
+    <h4>Reporting and Data Analysis</h4>
+    <p>Elham Ali, Mary Beth Bosco, Cole Reardon</p>
+  
+    <h4>Design and Data Visualization</h4>
+    <p>Elham Ali</p>
+  
+    <h4>Editing</h4>
+    <p>Chris Zuppa, Michelle Cheripka</p>
+  </section>
+
   <!-- Accordion toggle (click handler) -->
   <script>
     function toggleAccordion() {
@@ -202,7 +244,7 @@
   </script>
 
   <!-- Scrollytelling behavior (local) -->
-  <script src="flourish-scrolly.js"></script>
+  <script src="scripts.js"></script>
   <!-- Flourish scrolly helper (CDN) -->
   <script src="https://cdn.flourish.rocks/flourish-scrolly-v1.0.0.min.js"></script>
 </body>
