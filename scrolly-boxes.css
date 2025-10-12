@@ -221,3 +221,26 @@
 #wrapper {
   padding-top: clamp(18px, 3vh, 80px);
 }
+
+:root{
+  --page-max: 920px;                 /* your content width */
+  --gutter: clamp(16px, 4vw, 32px);  /* comfy side padding */
+}
+
+/* Center and constrain the whole story */
+#wrapper{
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Make media responsive inside the column */
+.media{
+  margin: 1.25rem 0;
+}
+.media img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
