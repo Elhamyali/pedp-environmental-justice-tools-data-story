@@ -192,7 +192,7 @@ hr{
 }
 .hero-media figcaption{
   margin-top: 6px;
-  text-align: center;
+  text-align: left;
   font-size: var(--fs-caption);
   line-height: 1.4;
   color: var(--ink-2);
