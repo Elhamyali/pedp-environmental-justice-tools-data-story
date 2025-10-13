@@ -1,0 +1,26 @@
+{
+  "name": "PEDP Environmental Justice Tools Story",
+  "short_name": "PEDP Made Possible Story",
+  "start_url": "/pedp-environmental-justice-tools-data-story/",
+  "display": "standalone",
+  "background_color": "#F4F1EC",
+  "theme_color": "#6D6659",
+  "description": "We analyzed 2,212 studies that used federal climate and environmental justice tools. See how they’re used and why researchers rely on them.",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
