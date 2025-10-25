@@ -53,6 +53,7 @@ body{
   background: var(--bg);
   color: var(--ink);
   font-family: 'Figtree', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  /* Body smoothing is fine here; we override on headings for thickness */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: var(--lh);
@@ -96,6 +97,7 @@ img, video, svg { max-width: 100%; height: auto; display: block; }
   text-align: center;
 }
 
+/* Generic h1 for any other headings you might add */
 h1 {
   font-weight: 400;
   font-size: var(--fs-h);
@@ -119,21 +121,36 @@ h1 {
   text-align: center;
 }
 
-#key-points h5{
-  font-family: 'Source Serif 4', serif;
-  font-weight: 700;
-  font-size: var(--fs-h);
-  margin: 0.6em 0 0.4em;
+/* === Subheads === */
+#key-points .subhead{
+  font-size: clamp(18px, 1.9vw, 22px); 
+  line-height: 1.2;
 }
 
-#why-this-matters h2,
-#by-the-numbers h2,
-#what-we-heard h2{
+#why-this-matters h3,
+#by-the-numbers h3,
+#what-we-heard h3,
+.subhead{
   font-family: 'Source Serif 4', serif;
-  font-weight: 700;
-  font-size: var(--fs-h);
-  margin: 0.6em 0 0.4em;
+  font-weight: 900;                                  
+  font-variation-settings: "wght" 900, "opsz" 28;  
+  font-optical-sizing: auto;
+
+  /* Make headers render thicker on macOS */
+  -webkit-font-smoothing: auto;   
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+  font-synthesis-weight: none;     
+
+  font-size: clamp(19px, 2vw, 24px);
+  line-height: 1.15;
+  letter-spacing: 0;
+  margin: 1.1rem 0 .55rem;
 }
+
+/* Key points list visuals */
+#key-points ul { margin: .25rem 0 1rem 1.2rem; }
+#key-points li::marker { font-size: 1.25em; }
 
 /* Scope link underlines to content only (keeps logo clean) */
 #wrapper a{
@@ -319,8 +336,6 @@ hr{
 /* ===========================
    FOOTER
    =========================== */
-   
-/* Footer */
 .site-footer{
   margin-top: 3rem;
   background: var(--bg);
@@ -354,7 +369,6 @@ hr{
 .share-btn:hover{ background: var(--muted); }
 .share-btn:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px; }
 .share-btn svg{ display:block; }
-
 
 /* ===========================
    FLOURISH / SCROLLY
