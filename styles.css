@@ -150,7 +150,13 @@ h1 {
 
 /* Key points list visuals */
 #key-points ul { margin: .25rem 0 1rem 1.2rem; }
-#key-points li::marker { font-size: 1.25em; }
+#key-points li::marker { font-size: 1em; }
+
+/* scale the bullet up only when there’s room */
+@media (min-width: 600px){
+  #key-points li::marker { font-size: 1.25em; }
+}
+
 
 /* Scope link underlines to content only (keeps logo clean) */
 #wrapper a{
