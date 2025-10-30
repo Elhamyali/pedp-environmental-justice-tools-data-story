@@ -408,24 +408,49 @@
         <a class="footer-link" href="https://www.linkedin.com/company/public-environmental-data-project" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
+        <span class="footer-sep">·</span>
+        <a class="footer-link" href="https://bsky.app/profile/publicenvirodata.bsky.social" target="_blank" rel="noopener noreferrer">
+          Bluesky
+        </a>
       </div>
 
-      <nav class="footer-share" aria-label="Share this page">
-        <a id="share-linkedin" class="share-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8 8.5h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-5.9c0-1.4-.02-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V23H8V8.5z"/></svg>
-          <span class="share-label">LinkedIn</span>
-        </a>
-        <a id="share-email" class="share-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share by email">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <span class="share-label">Email</span>
-        </a>
-        <button id="share-copy" class="share-btn" type="button" aria-label="Copy link to clipboard">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.59 13.41a1.996 1.996 0 0 0 2.82 0l4.24-4.24a2 2 0 1 0-2.83-2.83l-1.41 1.41 1.41-1.41-4.24 4.24a1.996 1.996 0 0 0 0 2.83z"/><path d="M13.41 10.59a1.996 1.996 0 0 0-2.82 0L6.35 14.83a2 2 0 1 0 2.83 2.83l1.41-1.41-1.41 1.41 4.24-4.24a1.996 1.996 0 0 0 0-2.83z"/></svg>
-          <span class="share-label">Copy</span>
-        </button>
-      </nav>
-    </div>
-  </footer>
+    <nav class="footer-share" aria-label="Share this page">
+      <!-- LinkedIn -->
+      <a id="share-linkedin" class="share-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8 8.5h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-5.9c0-1.4-.02-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V23H8V8.5z"/>
+        </svg>
+        <span class="share-label">LinkedIn</span>
+      </a>
+
+      <!-- Bluesky -->
+      <a id="share-bluesky" class="share-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky">
+        <!-- Bluesky logo (official simplified version) -->
+        <svg width="20" height="20" viewBox="0 0 600 600" aria-hidden="true">
+          <path fill="currentColor" d="M300 225c37-76 111-162 171-195 43-25 95-40 129 5s18 110-12 152c-21 29-68 64-116 92 52-6 109-17 140-6 32 12 50 48 32 87-13 28-48 64-90 103-50 48-95 93-129 89-25-3-41-29-57-71-10-27-24-73-26-76-1-2-15 49-26 76-16 42-32 68-57 71-34 4-79-41-129-89-42-39-77-75-90-103-18-39 0-75 32-87 31-11 88 0 140 6-48-28-95-63-116-92-30-42-46-107-12-152s86-30 129-5c60 33 134 119 171 195z"/>
+        </svg>
+        <span class="share-label">Bluesky</span>
+      </a>
+
+      <!-- Email -->
+      <a id="share-email" class="share-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share by email">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        <span class="share-label">Email</span>
+      </a>
+
+      <!-- Copy link -->
+      <button id="share-copy" class="share-btn" type="button" aria-label="Copy link to clipboard">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.59 13.41a1.996 1.996 0 0 0 2.82 0l4.24-4.24a2 2 0 1 0-2.83-2.83l-1.41 1.41 1.41-1.41-4.24 4.24a1.996 1.996 0 0 0 0 2.83z"/>
+          <path d="M13.41 10.59a1.996 1.996 0 0 0-2.82 0L6.35 14.83a2 2 0 1 0 2.83 2.83l1.41-1.41-1.41 1.41 4.24-4.24a1.996 1.996 0 0 0 0-2.83z"/>
+        </svg>
+        <span class="share-label">Copy</span>
+      </button>
+    </nav>
+  </div>
+</footer>
 
   <!-- Accordion toggle (click handler) -->
   <script>
